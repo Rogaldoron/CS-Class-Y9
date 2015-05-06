@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLOWCHART VERSION="4.00" NUMPRINTEDPAGESWIDE="2" NUMPRINTEDPAGESHIGH="2" PRINTEDPAGEWIDTH="720" PRINTEDPAGEHEIGHT="960" REDUCETOSINGLEPRINTEDPAGE="TRUE" SHOWBOUNDARIES="FALSE">
+  <LINKERMODULE>
+    <LIFT NAME="Lift" SHOWLABELS="FALSE" MIMICWINDOWX="679" MIMICWINDOWY="19" MIMICWINDOWW="587" MIMICWINDOWH="796" FOURBUTTONS="FALSE" />
+  </LINKERMODULE>
+  <MODULES>
+    <GLOBALVARIABLES NAME="Global Variables" />
+  </MODULES>
+  <PAGE>
+    <SYMBOLS>
+      <STARTSUB_SYMBOL ID="0" X="256" Y="56">
+        <SYMBOLDATA TYPE="STARTTHREAD" THREADNAME="1" />
+        <LINE TO_ID="4">
+          <VERTEX X="256" Y="68" />
+          <VERTEX X="256" Y="116" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <DECISION_SYMBOL ID="1" X="256" Y="308">
+        <SYMBOLDATA LEFT="Global Variables.x" RIGHT=".RealConstant.1.00000000" OP="IsEqualTo" />
+        <LINEYES TO_ID="3">
+          <VERTEX X="256" Y="332" />
+          <VERTEX X="256" Y="368" />
+        </LINEYES>
+      </DECISION_SYMBOL>
+      <STARTSUB_SYMBOL ID="2" X="416" Y="56">
+        <SYMBOLDATA TYPE="STARTSUB" SUBNAME="GotoFloor1" />
+      </STARTSUB_SYMBOL>
+      <CALLSUB_SYMBOL ID="3" X="256" Y="392">
+        <SYMBOLDATA SUBNAME="GotoFloor1" SUBMULTIPLIER="1" />
+      </CALLSUB_SYMBOL>
+      <ASSIGNMENT_SYMBOL ID="4" X="256" Y="140">
+        <SYMBOLDATA TARGET="Global Variables.x" FIRST=".RealConstant.0.00000000" OP="None" />
+        <LINE TO_ID="5">
+          <VERTEX X="256" Y="164" />
+          <VERTEX X="256" Y="200" />
+        </LINE>
+      </ASSIGNMENT_SYMBOL>
+      <ASSIGNMENT_SYMBOL ID="5" X="256" Y="224">
+        <SYMBOLDATA TARGET="Global Variables.x" FIRST="Global Variables.x" SECOND=".RealConstant.1.00000000" OP="Add" />
+        <LINE TO_ID="1">
+          <VERTEX X="256" Y="248" />
+          <VERTEX X="256" Y="284" />
+        </LINE>
+      </ASSIGNMENT_SYMBOL>
+    </SYMBOLS>
+    <LABELS />
+  </PAGE>
+</FLOWCHART>

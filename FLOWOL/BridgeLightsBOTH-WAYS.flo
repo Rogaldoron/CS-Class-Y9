@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLOWCHART VERSION="4.00" NUMPRINTEDPAGESWIDE="2" NUMPRINTEDPAGESHIGH="2" PRINTEDPAGEWIDTH="720" PRINTEDPAGEHEIGHT="960" REDUCETOSINGLEPRINTEDPAGE="TRUE" SHOWBOUNDARIES="FALSE">
+  <LINKERMODULE>
+    <BridLigh NAME="Bridge Lights" SHOWLABELS="FALSE" MIMICWINDOWX="713" MIMICWINDOWY="78" MIMICWINDOWW="517" MIMICWINDOWH="413" />
+  </LINKERMODULE>
+  <MODULES />
+  <PAGE>
+    <SYMBOLS>
+      <STARTSUB_SYMBOL ID="0" X="224" Y="56">
+        <SYMBOLDATA TYPE="STARTTHREAD" THREADNAME="1" />
+        <LINE TO_ID="23">
+          <VERTEX X="224" Y="68" />
+          <VERTEX X="224" Y="116" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <STARTSUB_SYMBOL ID="1" X="384" Y="56">
+        <SYMBOLDATA TYPE="STARTSUB" SUBNAME="WAY-1" />
+        <LINE TO_ID="22">
+          <VERTEX X="384" Y="68" />
+          <VERTEX X="384" Y="116" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <CALLSUB_SYMBOL ID="2" X="224" Y="308">
+        <SYMBOLDATA SUBNAME="WAY-1" SUBMULTIPLIER="1" />
+        <LINE TO_ID="25">
+          <VERTEX X="224" Y="332" />
+          <VERTEX X="224" Y="380" />
+        </LINE>
+      </CALLSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="3" X="384" Y="224">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.1Amber" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="4">
+          <VERTEX X="384" Y="248" />
+          <VERTEX X="384" Y="284" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="4" X="384" Y="308">
+        <SYMBOLDATA DELAY=".RealConstant.1.00000000" />
+        <LINE TO_ID="5">
+          <VERTEX X="384" Y="332" />
+          <VERTEX X="384" Y="368" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="5" X="384" Y="392">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.1Amber" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="6">
+          <VERTEX X="384" Y="416" />
+          <VERTEX X="384" Y="452" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="6" X="384" Y="476">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.1Red" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Green" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="7">
+          <VERTEX X="384" Y="500" />
+          <VERTEX X="384" Y="536" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="7" X="384" Y="560">
+        <SYMBOLDATA DELAY=".RealConstant.9.00000000" />
+        <LINE TO_ID="8">
+          <VERTEX X="384" Y="584" />
+          <VERTEX X="384" Y="620" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="8" X="384" Y="644">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.1Green" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.1Amber" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="9">
+          <VERTEX X="384" Y="668" />
+          <VERTEX X="384" Y="732" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="9" X="384" Y="756">
+        <SYMBOLDATA DELAY=".RealConstant.2.00000000" />
+        <LINE TO_ID="10">
+          <VERTEX X="384" Y="780" />
+          <VERTEX X="384" Y="816" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="10" X="384" Y="840">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.1Amber" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.1Red" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="12">
+          <VERTEX X="384" Y="864" />
+          <VERTEX X="384" Y="900" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <STARTSUB_SYMBOL ID="11" X="544" Y="56">
+        <SYMBOLDATA TYPE="STARTSUB" SUBNAME="WAY-2" />
+        <LINE TO_ID="13">
+          <VERTEX X="544" Y="68" />
+          <VERTEX X="544" Y="116" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <CALLSUB_SYMBOL ID="12" X="384" Y="924">
+        <SYMBOLDATA SUBNAME="WAY-2" SUBMULTIPLIER="1" />
+      </CALLSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="13" X="544" Y="140">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Red" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="14">
+          <VERTEX X="544" Y="164" />
+          <VERTEX X="544" Y="200" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="14" X="544" Y="224">
+        <SYMBOLDATA DELAY=".RealConstant.2.00000000" />
+        <LINE TO_ID="15">
+          <VERTEX X="544" Y="248" />
+          <VERTEX X="544" Y="284" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="15" X="544" Y="308">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Amber" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="16">
+          <VERTEX X="544" Y="332" />
+          <VERTEX X="544" Y="368" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="16" X="544" Y="392">
+        <SYMBOLDATA DELAY=".RealConstant.1.00000000" />
+        <LINE TO_ID="17">
+          <VERTEX X="544" Y="416" />
+          <VERTEX X="544" Y="452" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="17" X="544" Y="476">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Green" NEWSTATE="TRUE" />
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Amber" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Red" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="18">
+          <VERTEX X="544" Y="500" />
+          <VERTEX X="544" Y="564" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="18" X="544" Y="588">
+        <SYMBOLDATA DELAY=".RealConstant.9.00000000" />
+        <LINE TO_ID="19">
+          <VERTEX X="544" Y="612" />
+          <VERTEX X="544" Y="648" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="19" X="544" Y="672">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Green" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Amber" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="20">
+          <VERTEX X="544" Y="696" />
+          <VERTEX X="544" Y="732" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="20" X="544" Y="756">
+        <SYMBOLDATA DELAY=".RealConstant.2.00000000" />
+        <LINE TO_ID="21">
+          <VERTEX X="544" Y="780" />
+          <VERTEX X="544" Y="816" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="21" X="544" Y="840">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Amber" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.2Red" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="26">
+          <VERTEX X="544" Y="864" />
+          <VERTEX X="544" Y="900" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="22" X="384" Y="140">
+        <SYMBOLDATA DELAY=".RealConstant.2.00000000" />
+        <LINE TO_ID="3">
+          <VERTEX X="384" Y="164" />
+          <VERTEX X="384" Y="200" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="23" X="224" Y="140">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Bridge Lights.1Red" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="24">
+          <VERTEX X="224" Y="164" />
+          <VERTEX X="224" Y="200" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="24" X="224" Y="224">
+        <SYMBOLDATA DELAY=".RealConstant.15.00000000" />
+        <LINE TO_ID="2">
+          <VERTEX X="224" Y="248" />
+          <VERTEX X="224" Y="284" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <STARTSUB_SYMBOL ID="25" X="224" Y="392">
+        <SYMBOLDATA TYPE="STOP" />
+      </STARTSUB_SYMBOL>
+      <CALLSUB_SYMBOL ID="26" X="544" Y="924">
+        <SYMBOLDATA SUBNAME="WAY-1" SUBMULTIPLIER="1" />
+      </CALLSUB_SYMBOL>
+    </SYMBOLS>
+    <LABELS />
+  </PAGE>
+</FLOWCHART>

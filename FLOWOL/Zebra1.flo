@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLOWCHART VERSION="4.00" NUMPRINTEDPAGESWIDE="2" NUMPRINTEDPAGESHIGH="2" PRINTEDPAGEWIDTH="720" PRINTEDPAGEHEIGHT="960" REDUCETOSINGLEPRINTEDPAGE="TRUE" SHOWBOUNDARIES="FALSE">
+  <LINKERMODULE>
+    <Zebra NAME="Zebra Crossing" SHOWLABELS="FALSE" MIMICWINDOWX="830" MIMICWINDOWY="78" MIMICWINDOWW="400" MIMICWINDOWH="320" />
+  </LINKERMODULE>
+  <MODULES />
+  <PAGE>
+    <SYMBOLS>
+      <STARTSUB_SYMBOL ID="0" X="256" Y="84">
+        <SYMBOLDATA TYPE="STARTTHREAD" THREADNAME="1" />
+        <LINE TO_ID="3">
+          <VERTEX X="256" Y="96" />
+          <VERTEX X="256" Y="144" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="1" X="256" Y="252">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Zebra Crossing.Light" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="4">
+          <VERTEX X="256" Y="276" />
+          <VERTEX X="256" Y="312" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="2" X="256" Y="420">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Zebra Crossing.Light" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="5">
+          <VERTEX X="256" Y="444" />
+          <VERTEX X="256" Y="492" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="3" X="256" Y="168">
+        <SYMBOLDATA DELAY=".RealConstant.5.00000000" />
+        <LINE TO_ID="1">
+          <VERTEX X="256" Y="192" />
+          <VERTEX X="256" Y="228" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <DELAY_SYMBOL ID="4" X="256" Y="336">
+        <SYMBOLDATA DELAY=".RealConstant.5.00000000" />
+        <LINE TO_ID="2">
+          <VERTEX X="256" Y="360" />
+          <VERTEX X="256" Y="396" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <STARTSUB_SYMBOL ID="5" X="256" Y="504">
+        <SYMBOLDATA TYPE="STOP" />
+      </STARTSUB_SYMBOL>
+    </SYMBOLS>
+    <LABELS />
+  </PAGE>
+</FLOWCHART>

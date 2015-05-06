@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLOWCHART VERSION="4.00" NUMPRINTEDPAGESWIDE="2" NUMPRINTEDPAGESHIGH="2" PRINTEDPAGEWIDTH="720" PRINTEDPAGEHEIGHT="960" REDUCETOSINGLEPRINTEDPAGE="TRUE" SHOWBOUNDARIES="FALSE">
+  <LINKERMODULE>
+    <AutoHome NAME="Automatic Home" SHOWLABELS="TRUE" MIMICWINDOWX="638" MIMICWINDOWY="78" MIMICWINDOWW="414" MIMICWINDOWH="333" />
+  </LINKERMODULE>
+  <MODULES>
+    <GLOBALVARIABLES NAME="Global Variables">
+      <VARIABLE TAG="x" INDEX="0" />
+      <VARIABLE TAG="y" INDEX="1" />
+      <VARIABLE TAG="2da88a4f4dba4627b3817c3803ddfdd9" INDEX="2" />
+      <VARIABLE TAG="f640f97a70b242948c8c4cb3d36e84c1" INDEX="3" />
+      <VALUE TAG="2da88a4f4dba4627b3817c3803ddfdd9" NAME="z" />
+      <VALUE TAG="f640f97a70b242948c8c4cb3d36e84c1" NAME="a" />
+    </GLOBALVARIABLES>
+  </MODULES>
+  <PAGE>
+    <SYMBOLS>
+      <STARTSUB_SYMBOL ID="0" X="96" Y="56">
+        <SYMBOLDATA TYPE="STARTTHREAD" THREADNAME="1" />
+        <LINE TO_ID="24">
+          <VERTEX X="96" Y="68" />
+          <VERTEX X="96" Y="116" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <DECISION_SYMBOL ID="1" X="96" Y="224">
+        <SYMBOLDATA LEFT="Automatic Home.Temp" RIGHT=".RealConstant.50.00000000" OP="IsGreaterThan" />
+        <LINEYES TO_ID="2">
+          <VERTEX X="96" Y="248" />
+          <VERTEX X="96" Y="284" />
+        </LINEYES>
+        <LINENO TO_ID="7">
+          <VERTEX X="156" Y="224" />
+          <VERTEX X="168" Y="224" />
+          <VERTEX X="168" Y="344" />
+          <VERTEX X="96" Y="344" />
+          <VERTEX X="96" Y="368" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <OUTPUT_SYMBOL ID="2" X="96" Y="308">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Automatic Home.Fire" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Automatic Home.Fan" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="3">
+          <VERTEX X="48" Y="308" />
+          <VERTEX X="24" Y="308" />
+          <VERTEX X="24" Y="428" />
+          <VERTEX X="96" Y="428" />
+          <VERTEX X="96" Y="452" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DECISION_SYMBOL ID="3" X="96" Y="476">
+        <SYMBOLDATA LEFT="Automatic Home.Sun" RIGHT=".RealConstant.50.00000000" OP="IsGreaterThan" />
+        <LINEYES TO_ID="4">
+          <VERTEX X="96" Y="500" />
+          <VERTEX X="96" Y="536" />
+        </LINEYES>
+        <LINENO TO_ID="5">
+          <VERTEX X="156" Y="476" />
+          <VERTEX X="168" Y="476" />
+          <VERTEX X="168" Y="680" />
+          <VERTEX X="96" Y="680" />
+          <VERTEX X="96" Y="704" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <OUTPUT_SYMBOL ID="4" X="96" Y="560">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Automatic Home.Blinds" NEWDIRECTION="Forward" NEWPOWER=".RealConstant.100.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="8">
+          <VERTEX X="96" Y="584" />
+          <VERTEX X="96" Y="620" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="5" X="96" Y="728">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Automatic Home.Blinds" NEWDIRECTION="Off" />
+        </SYMBOLDATA>
+        <LINE TO_ID="6">
+          <VERTEX X="96" Y="752" />
+          <VERTEX X="96" Y="788" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="6" X="96" Y="812">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Automatic Home.Lamp" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="9">
+          <VERTEX X="96" Y="836" />
+          <VERTEX X="96" Y="872" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="7" X="96" Y="392">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Automatic Home.Fire" NEWSTATE="TRUE" />
+          <OUTPUT_ACTION OUTPUT="Automatic Home.Fan" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="3">
+          <VERTEX X="96" Y="416" />
+          <VERTEX X="96" Y="452" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="8" X="96" Y="644">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Automatic Home.Lamp" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="9">
+          <VERTEX X="48" Y="644" />
+          <VERTEX X="24" Y="644" />
+          <VERTEX X="24" Y="848" />
+          <VERTEX X="96" Y="848" />
+          <VERTEX X="96" Y="872" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DECISION_SYMBOL ID="9" X="96" Y="896">
+        <SYMBOLDATA LEFT="Automatic Home.Door Sw" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="10">
+          <VERTEX X="96" Y="920" />
+          <VERTEX X="96" Y="956" />
+        </LINEYES>
+        <LINENO TO_ID="11">
+          <VERTEX X="156" Y="896" />
+          <VERTEX X="168" Y="896" />
+          <VERTEX X="168" Y="1016" />
+          <VERTEX X="96" Y="1016" />
+          <VERTEX X="96" Y="1040" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <OUTPUT_SYMBOL ID="10" X="96" Y="980">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Automatic Home.Door Light" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="11" X="96" Y="1064">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Automatic Home.Door Light" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="12">
+          <VERTEX X="96" Y="1088" />
+          <VERTEX X="96" Y="1124" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DECISION_SYMBOL ID="12" X="96" Y="1148">
+        <SYMBOLDATA LEFT="Automatic Home.Open" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="25">
+          <VERTEX X="96" Y="1172" />
+          <VERTEX X="96" Y="1208" />
+        </LINEYES>
+        <LINENO TO_ID="18">
+          <VERTEX X="156" Y="1148" />
+          <VERTEX X="174" Y="1148" />
+          <VERTEX X="174" Y="1772" />
+          <VERTEX X="96" Y="1772" />
+          <VERTEX X="96" Y="1796" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <OUTPUT_SYMBOL ID="13" X="96" Y="1484">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Automatic Home.Garage" NEWDIRECTION="Forward" NEWPOWER=".RealConstant.100.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="17">
+          <VERTEX X="96" Y="1508" />
+          <VERTEX X="96" Y="1544" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="14" X="96" Y="1652">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Automatic Home.Garage" NEWDIRECTION="Off" />
+        </SYMBOLDATA>
+        <LINE TO_ID="26">
+          <VERTEX X="96" Y="1676" />
+          <VERTEX X="96" Y="1712" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <ASSIGNMENT_SYMBOL ID="15" X="96" Y="1316">
+        <SYMBOLDATA TARGET="Global Variables.x" FIRST=".RealConstant.1.00000000" OP="None" />
+        <LINE TO_ID="16">
+          <VERTEX X="96" Y="1340" />
+          <VERTEX X="96" Y="1376" />
+        </LINE>
+      </ASSIGNMENT_SYMBOL>
+      <DECISION_SYMBOL ID="16" X="96" Y="1400">
+        <SYMBOLDATA LEFT="Global Variables.x" RIGHT=".RealConstant.1.00000000" OP="IsEqualTo" />
+        <LINEYES TO_ID="13">
+          <VERTEX X="96" Y="1424" />
+          <VERTEX X="96" Y="1460" />
+        </LINEYES>
+        <LINENO TO_ID="14">
+          <VERTEX X="156" Y="1400" />
+          <VERTEX X="168" Y="1400" />
+          <VERTEX X="168" Y="1604" />
+          <VERTEX X="96" Y="1604" />
+          <VERTEX X="96" Y="1628" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <ASSIGNMENT_SYMBOL ID="17" X="96" Y="1568">
+        <SYMBOLDATA TARGET="Global Variables.x" FIRST=".RealConstant.0.00000000" OP="None" />
+        <LINE TO_ID="18">
+          <VERTEX X="144" Y="1568" />
+          <VERTEX X="156" Y="1568" />
+          <VERTEX X="156" Y="1598" />
+          <VERTEX X="30" Y="1598" />
+          <VERTEX X="30" Y="1772" />
+          <VERTEX X="96" Y="1772" />
+          <VERTEX X="96" Y="1796" />
+        </LINE>
+      </ASSIGNMENT_SYMBOL>
+      <DECISION_SYMBOL ID="18" X="96" Y="1820">
+        <SYMBOLDATA LEFT="Automatic Home.Close" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="21">
+          <VERTEX X="96" Y="1844" />
+          <VERTEX X="96" Y="1880" />
+        </LINEYES>
+        <LINENO TO_ID="1">
+          <VERTEX X="156" Y="1820" />
+          <VERTEX X="180" Y="1820" />
+          <VERTEX X="180" Y="188" />
+          <VERTEX X="96" Y="188" />
+          <VERTEX X="96" Y="200" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <OUTPUT_SYMBOL ID="19" X="544" Y="1876">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Automatic Home.Garage" NEWDIRECTION="Forward" NEWPOWER=".RealConstant.100.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="23">
+          <VERTEX X="544" Y="1900" />
+          <VERTEX X="544" Y="1912" />
+          <VERTEX X="612" Y="1912" />
+          <VERTEX X="612" Y="1820" />
+          <VERTEX X="624" Y="1820" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="20" X="800" Y="1820">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Automatic Home.Garage" NEWDIRECTION="Off" />
+        </SYMBOLDATA>
+        <LINE TO_ID="1">
+          <VERTEX X="848" Y="1820" />
+          <VERTEX X="872" Y="1820" />
+          <VERTEX X="872" Y="188" />
+          <VERTEX X="96" Y="188" />
+          <VERTEX X="96" Y="200" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <ASSIGNMENT_SYMBOL ID="21" X="96" Y="1904">
+        <SYMBOLDATA TARGET="Global Variables.y" FIRST=".RealConstant.1.00000000" OP="None" />
+        <LINE TO_ID="22">
+          <VERTEX X="144" Y="1904" />
+          <VERTEX X="168" Y="1904" />
+          <VERTEX X="168" Y="1848" />
+          <VERTEX X="292" Y="1848" />
+        </LINE>
+      </ASSIGNMENT_SYMBOL>
+      <DECISION_SYMBOL ID="22" X="352" Y="1848">
+        <SYMBOLDATA LEFT="Global Variables.y" RIGHT=".RealConstant.1.00000000" OP="IsEqualTo" />
+        <LINEYES TO_ID="19">
+          <VERTEX X="412" Y="1848" />
+          <VERTEX X="424" Y="1848" />
+          <VERTEX X="424" Y="1840" />
+          <VERTEX X="544" Y="1840" />
+          <VERTEX X="544" Y="1852" />
+        </LINEYES>
+        <LINENO TO_ID="20">
+          <VERTEX X="352" Y="1872" />
+          <VERTEX X="352" Y="1918" />
+          <VERTEX X="728" Y="1918" />
+          <VERTEX X="728" Y="1784" />
+          <VERTEX X="800" Y="1784" />
+          <VERTEX X="800" Y="1796" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <ASSIGNMENT_SYMBOL ID="23" X="672" Y="1820">
+        <SYMBOLDATA TARGET="Global Variables.x" FIRST=".RealConstant.0.00000000" OP="None" />
+      </ASSIGNMENT_SYMBOL>
+      <ASSIGNMENT_SYMBOL ID="24" X="96" Y="140">
+        <SYMBOLDATA TARGET="Global Variables.2da88a4f4dba4627b3817c3803ddfdd9" FIRST=".RealConstant.1.00000000" OP="None" />
+        <LINE TO_ID="1">
+          <VERTEX X="96" Y="164" />
+          <VERTEX X="96" Y="200" />
+        </LINE>
+      </ASSIGNMENT_SYMBOL>
+      <DECISION_SYMBOL ID="25" X="96" Y="1232">
+        <SYMBOLDATA LEFT="Global Variables.2da88a4f4dba4627b3817c3803ddfdd9" RIGHT=".RealConstant.1.00000000" OP="IsEqualTo" />
+        <LINEYES TO_ID="15">
+          <VERTEX X="96" Y="1256" />
+          <VERTEX X="96" Y="1292" />
+        </LINEYES>
+        <LINENO TO_ID="16">
+          <VERTEX X="156" Y="1232" />
+          <VERTEX X="168" Y="1232" />
+          <VERTEX X="168" Y="1352" />
+          <VERTEX X="96" Y="1352" />
+          <VERTEX X="96" Y="1376" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <ASSIGNMENT_SYMBOL ID="26" X="96" Y="1736">
+        <SYMBOLDATA TARGET="Global Variables.2da88a4f4dba4627b3817c3803ddfdd9" FIRST=".RealConstant.0.00000000" OP="None" />
+        <LINE TO_ID="18">
+          <VERTEX X="96" Y="1760" />
+          <VERTEX X="96" Y="1796" />
+        </LINE>
+      </ASSIGNMENT_SYMBOL>
+    </SYMBOLS>
+    <LABELS />
+  </PAGE>
+</FLOWCHART>

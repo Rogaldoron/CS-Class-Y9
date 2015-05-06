@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLOWCHART VERSION="4.00" NUMPRINTEDPAGESWIDE="2" NUMPRINTEDPAGESHIGH="2" PRINTEDPAGEWIDTH="720" PRINTEDPAGEHEIGHT="960" REDUCETOSINGLEPRINTEDPAGE="TRUE" SHOWBOUNDARIES="FALSE">
+  <LINKERMODULE>
+    <Zebra NAME="Zebra Crossing" SHOWLABELS="FALSE" MIMICWINDOWX="830" MIMICWINDOWY="78" MIMICWINDOWW="400" MIMICWINDOWH="320" />
+  </LINKERMODULE>
+  <MODULES>
+    <ADVANCEDTHREADS NAME="Advanced Threads" />
+  </MODULES>
+  <PAGE>
+    <SYMBOLS>
+      <STARTSUB_SYMBOL ID="0" X="192" Y="56">
+        <SYMBOLDATA TYPE="STARTTHREAD" THREADNAME="1" />
+        <LINE TO_ID="2">
+          <VERTEX X="192" Y="68" />
+          <VERTEX X="192" Y="116" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <STARTSUB_SYMBOL ID="1" X="384" Y="56">
+        <SYMBOLDATA TYPE="STARTSUB" SUBNAME="Flashy" />
+        <LINE TO_ID="7">
+          <VERTEX X="384" Y="68" />
+          <VERTEX X="384" Y="116" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="2" X="192" Y="140">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Zebra Crossing.Light" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="3">
+          <VERTEX X="192" Y="164" />
+          <VERTEX X="192" Y="200" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="3" X="192" Y="224">
+        <SYMBOLDATA DELAY=".RealConstant.5.00000000" />
+        <LINE TO_ID="4">
+          <VERTEX X="192" Y="248" />
+          <VERTEX X="192" Y="284" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="4" X="192" Y="308">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Zebra Crossing.Light" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="5">
+          <VERTEX X="192" Y="332" />
+          <VERTEX X="192" Y="368" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DELAY_SYMBOL ID="5" X="192" Y="392">
+        <SYMBOLDATA DELAY=".RealConstant.3.00000000" />
+        <LINE TO_ID="6">
+          <VERTEX X="192" Y="416" />
+          <VERTEX X="192" Y="452" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <CALLSUB_SYMBOL ID="6" X="192" Y="476">
+        <SYMBOLDATA SUBNAME="Flashy" SUBMULTIPLIER="25" />
+        <LINE TO_ID="11">
+          <VERTEX X="192" Y="500" />
+          <VERTEX X="192" Y="536" />
+        </LINE>
+      </CALLSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="7" X="384" Y="140">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Zebra Crossing.Light" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="8">
+          <VERTEX X="384" Y="164" />
+          <VERTEX X="384" Y="200" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="8" X="384" Y="224">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Zebra Crossing.Light" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="9">
+          <VERTEX X="384" Y="248" />
+          <VERTEX X="384" Y="296" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <STARTSUB_SYMBOL ID="9" X="384" Y="308">
+        <SYMBOLDATA TYPE="STOP" />
+      </STARTSUB_SYMBOL>
+      <STARTSUB_SYMBOL ID="10" X="544" Y="56">
+        <SYMBOLDATA TYPE="STARTSUB" SUBNAME="Flashy2" />
+        <LINE TO_ID="12">
+          <VERTEX X="544" Y="68" />
+          <VERTEX X="544" Y="116" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <CALLSUB_SYMBOL ID="11" X="192" Y="560">
+        <SYMBOLDATA SUBNAME="Flashy2" SUBMULTIPLIER="25" />
+      </CALLSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="12" X="544" Y="140">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Zebra Crossing.Light" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="13">
+          <VERTEX X="544" Y="164" />
+          <VERTEX X="544" Y="200" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="13" X="544" Y="224">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Zebra Crossing.Light" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="14">
+          <VERTEX X="544" Y="248" />
+          <VERTEX X="544" Y="296" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <STARTSUB_SYMBOL ID="14" X="544" Y="308">
+        <SYMBOLDATA TYPE="STOP" />
+      </STARTSUB_SYMBOL>
+    </SYMBOLS>
+    <LABELS />
+  </PAGE>
+</FLOWCHART>

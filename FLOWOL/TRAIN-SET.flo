@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLOWCHART VERSION="4.00" NUMPRINTEDPAGESWIDE="2" NUMPRINTEDPAGESHIGH="2" PRINTEDPAGEWIDTH="720" PRINTEDPAGEHEIGHT="960" REDUCETOSINGLEPRINTEDPAGE="TRUE" SHOWBOUNDARIES="FALSE">
+  <LINKERMODULE>
+    <TRAINSET2 NAME="Train Set 2" SHOWLABELS="TRUE" />
+  </LINKERMODULE>
+  <MODULES />
+  <PAGE>
+    <SYMBOLS>
+      <STARTSUB_SYMBOL ID="0" X="224" Y="84">
+        <SYMBOLDATA TYPE="STARTTHREAD" THREADNAME="1" />
+        <LINE TO_ID="1">
+          <VERTEX X="224" Y="96" />
+          <VERTEX X="224" Y="144" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="1" X="224" Y="168">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Train Set 2.Red Train Motor" NEWDIRECTION="Forward" NEWPOWER=".RealConstant.50.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="2">
+          <VERTEX X="224" Y="192" />
+          <VERTEX X="224" Y="228" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DECISION_SYMBOL ID="2" X="224" Y="252">
+        <SYMBOLDATA LEFT="Train Set 2.Trip A" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="4">
+          <VERTEX X="224" Y="276" />
+          <VERTEX X="224" Y="312" />
+        </LINEYES>
+        <LINENO TO_ID="1">
+          <VERTEX X="284" Y="252" />
+          <VERTEX X="296" Y="252" />
+          <VERTEX X="296" Y="132" />
+          <VERTEX X="224" Y="132" />
+          <VERTEX X="224" Y="144" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <STARTSUB_SYMBOL ID="3" X="416" Y="84">
+        <SYMBOLDATA TYPE="STARTSUB" SUBNAME="FLASHING LIGHTS" />
+        <LINE TO_ID="7">
+          <VERTEX X="416" Y="96" />
+          <VERTEX X="416" Y="144" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <CALLSUB_SYMBOL ID="4" X="224" Y="336">
+        <SYMBOLDATA SUBNAME="FLASHING LIGHTS" SUBMULTIPLIER="1" />
+      </CALLSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="5" X="416" Y="252">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Left Red Light" NEWSTATE="TRUE" />
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Right Red Light" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="19">
+          <VERTEX X="416" Y="276" />
+          <VERTEX X="416" Y="312" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="6" X="416" Y="504">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Left Red Light" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Right Red Light" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="18">
+          <VERTEX X="416" Y="528" />
+          <VERTEX X="416" Y="564" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="7" X="416" Y="168">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Train Set 2.Barrier" NEWDIRECTION="Forward" NEWPOWER=".RealConstant.100.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="5">
+          <VERTEX X="416" Y="192" />
+          <VERTEX X="416" Y="228" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DECISION_SYMBOL ID="8" X="416" Y="756">
+        <SYMBOLDATA LEFT="Train Set 2.Trip B" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="10">
+          <VERTEX X="416" Y="780" />
+          <VERTEX X="416" Y="816" />
+        </LINEYES>
+        <LINENO TO_ID="5">
+          <VERTEX X="356" Y="756" />
+          <VERTEX X="344" Y="756" />
+          <VERTEX X="344" Y="252" />
+          <VERTEX X="368" Y="252" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <STARTSUB_SYMBOL ID="9" X="576" Y="84">
+        <SYMBOLDATA TYPE="STARTSUB" SUBNAME="TRAIN2-SETOFF" />
+        <LINE TO_ID="11">
+          <VERTEX X="576" Y="96" />
+          <VERTEX X="576" Y="144" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <CALLSUB_SYMBOL ID="10" X="416" Y="840">
+        <SYMBOLDATA SUBNAME="TRAIN2-SETOFF" SUBMULTIPLIER="1" />
+      </CALLSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="11" X="576" Y="168">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Train Set 2.White Train Motor" NEWDIRECTION="Forward" NEWPOWER=".RealConstant.50.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="12">
+          <VERTEX X="576" Y="192" />
+          <VERTEX X="576" Y="228" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DECISION_SYMBOL ID="12" X="576" Y="252">
+        <SYMBOLDATA LEFT="Train Set 2.Trip E" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="13">
+          <VERTEX X="576" Y="276" />
+          <VERTEX X="576" Y="312" />
+        </LINEYES>
+        <LINENO TO_ID="11">
+          <VERTEX X="636" Y="252" />
+          <VERTEX X="648" Y="252" />
+          <VERTEX X="648" Y="132" />
+          <VERTEX X="576" Y="132" />
+          <VERTEX X="576" Y="144" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <OUTPUT_SYMBOL ID="13" X="576" Y="336">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Left Red Light" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Right Red Light" NEWSTATE="FALSE" />
+          <MOTORWITHPOWER_ACTION MOTOR="Train Set 2.Barrier" NEWDIRECTION="Reverse" NEWPOWER=".RealConstant.100.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="25">
+          <VERTEX X="576" Y="360" />
+          <VERTEX X="576" Y="396" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DECISION_SYMBOL ID="14" X="576" Y="504">
+        <SYMBOLDATA LEFT="Train Set 2.Trip A" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="24">
+          <VERTEX X="576" Y="528" />
+          <VERTEX X="576" Y="564" />
+        </LINEYES>
+        <LINENO TO_ID="13">
+          <VERTEX X="636" Y="504" />
+          <VERTEX X="648" Y="504" />
+          <VERTEX X="648" Y="300" />
+          <VERTEX X="576" Y="300" />
+          <VERTEX X="576" Y="312" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <OUTPUT_SYMBOL ID="15" X="576" Y="672">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Left Red Light" NEWSTATE="TRUE" />
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Right Red Light" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="22">
+          <VERTEX X="576" Y="696" />
+          <VERTEX X="576" Y="732" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="16" X="576" Y="840">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Left Red Light" NEWSTATE="FALSE" />
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Right Red Light" NEWSTATE="FALSE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="23">
+          <VERTEX X="576" Y="864" />
+          <VERTEX X="576" Y="900" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <DECISION_SYMBOL ID="17" X="576" Y="1008">
+        <SYMBOLDATA LEFT="Train Set 2.Trip E" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="13">
+          <VERTEX X="576" Y="1032" />
+          <VERTEX X="576" Y="1044" />
+          <VERTEX X="504" Y="1044" />
+          <VERTEX X="504" Y="336" />
+          <VERTEX X="528" Y="336" />
+        </LINEYES>
+        <LINENO TO_ID="15">
+          <VERTEX X="636" Y="1008" />
+          <VERTEX X="648" Y="1008" />
+          <VERTEX X="648" Y="636" />
+          <VERTEX X="576" Y="636" />
+          <VERTEX X="576" Y="648" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <DECISION_SYMBOL ID="18" X="416" Y="588">
+        <SYMBOLDATA LEFT="Train Set 2.Trip B" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="10">
+          <VERTEX X="476" Y="588" />
+          <VERTEX X="488" Y="588" />
+          <VERTEX X="488" Y="792" />
+          <VERTEX X="416" Y="792" />
+          <VERTEX X="416" Y="816" />
+        </LINEYES>
+        <LINENO TO_ID="21">
+          <VERTEX X="416" Y="612" />
+          <VERTEX X="416" Y="648" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <DECISION_SYMBOL ID="19" X="416" Y="336">
+        <SYMBOLDATA LEFT="Train Set 2.Trip B" RIGHT=".StateConstant.TRUE" OP="IsEqualTo" />
+        <LINEYES TO_ID="10">
+          <VERTEX X="476" Y="336" />
+          <VERTEX X="488" Y="336" />
+          <VERTEX X="488" Y="792" />
+          <VERTEX X="416" Y="792" />
+          <VERTEX X="416" Y="816" />
+        </LINEYES>
+        <LINENO TO_ID="20">
+          <VERTEX X="416" Y="360" />
+          <VERTEX X="416" Y="396" />
+        </LINENO>
+      </DECISION_SYMBOL>
+      <DELAY_SYMBOL ID="20" X="416" Y="420">
+        <SYMBOLDATA DELAY=".RealConstant.0.50000000" />
+        <LINE TO_ID="6">
+          <VERTEX X="416" Y="444" />
+          <VERTEX X="416" Y="480" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <DELAY_SYMBOL ID="21" X="416" Y="672">
+        <SYMBOLDATA DELAY=".RealConstant.0.50000000" />
+        <LINE TO_ID="8">
+          <VERTEX X="416" Y="696" />
+          <VERTEX X="416" Y="732" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <DELAY_SYMBOL ID="22" X="576" Y="756">
+        <SYMBOLDATA DELAY=".RealConstant.0.50000000" />
+        <LINE TO_ID="16">
+          <VERTEX X="576" Y="780" />
+          <VERTEX X="576" Y="816" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <DELAY_SYMBOL ID="23" X="576" Y="924">
+        <SYMBOLDATA DELAY=".RealConstant.0.50000000" />
+        <LINE TO_ID="17">
+          <VERTEX X="576" Y="948" />
+          <VERTEX X="576" Y="984" />
+        </LINE>
+      </DELAY_SYMBOL>
+      <OUTPUT_SYMBOL ID="24" X="576" Y="588">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Train Set 2.Barrier" NEWDIRECTION="Forward" NEWPOWER=".RealConstant.100.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="15">
+          <VERTEX X="576" Y="612" />
+          <VERTEX X="576" Y="648" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <OUTPUT_SYMBOL ID="25" X="576" Y="420">
+        <SYMBOLDATA>
+          <MOTORWITHPOWER_ACTION MOTOR="Train Set 2.Barrier" NEWDIRECTION="Reverse" NEWPOWER=".RealConstant.40.00000000" />
+        </SYMBOLDATA>
+        <LINE TO_ID="14">
+          <VERTEX X="576" Y="444" />
+          <VERTEX X="576" Y="480" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+      <STARTSUB_SYMBOL ID="26" X="768" Y="84">
+        <SYMBOLDATA TYPE="STARTTHREAD" THREADNAME="2" />
+        <LINE TO_ID="27">
+          <VERTEX X="768" Y="96" />
+          <VERTEX X="768" Y="144" />
+        </LINE>
+      </STARTSUB_SYMBOL>
+      <OUTPUT_SYMBOL ID="27" X="768" Y="168">
+        <SYMBOLDATA>
+          <OUTPUT_ACTION OUTPUT="Train Set 2.White Train Lights" NEWSTATE="TRUE" />
+          <OUTPUT_ACTION OUTPUT="Train Set 2.Red Train Lights" NEWSTATE="TRUE" />
+        </SYMBOLDATA>
+        <LINE TO_ID="27">
+          <VERTEX X="816" Y="168" />
+          <VERTEX X="840" Y="168" />
+          <VERTEX X="840" Y="132" />
+          <VERTEX X="768" Y="132" />
+          <VERTEX X="768" Y="144" />
+        </LINE>
+      </OUTPUT_SYMBOL>
+    </SYMBOLS>
+    <LABELS />
+  </PAGE>
+</FLOWCHART>
